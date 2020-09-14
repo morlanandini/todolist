@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block homepage %}
+<form  method="post">
+  {{obj|crispy}}
+  {%csrf_token%}
+  <input type="date" name="date" value="">
+<input type="submit" class='btn btn-success' value="create">
+</form>
+{% endblock %}

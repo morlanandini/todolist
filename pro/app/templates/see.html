@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block homepage %}
+<table class="table">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          {%for i in obj %}
+          <tr class="info">
+        <td>{{i.event_name}}</td>
+        <td>{{i.date_event}}</td>
+        <td>{{i.event_description}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}
