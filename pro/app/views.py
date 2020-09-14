@@ -89,8 +89,8 @@ def mail_scheduler():
              print('1')
              event_reminder(user_email=obj.user_obj.user_email,user_name=obj.user_obj.user_name,event_name=obj.event_name,event_description=obj.event_description)
              obj.delete()
-    Timer(60*60*24.0, mail_scheduler).start()
-Timer(10.0,mail_scheduler).start()
+    #Timer(60*60*24.0, mail_scheduler).start() enable these 2 for sechuled mails
+#Timer(10.0,mail_scheduler).start()
 #---------------------------------------------------------------------------------
 
 def  event_reminder(user_email,user_name,event_name,event_description):
